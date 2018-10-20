@@ -29,6 +29,7 @@ options=(
         3_repos " Enable Snaps" on
 	#B "<---Category: System--->" on
 	    1_system " Install GDebi" off
+        2_system " Update Plank" on
     #C "<---Category: Social--->" on
 		1_social " Slack Client" off
 	    2_social " Zoom Meeting Client" off
@@ -103,13 +104,28 @@ options=(
 
 # Section B ----------system----------
         1_system)
-            #SMB
+            #GDEBI
             echo "***********************"
             echo "* Installing GDEBI... *"
             echo "***********************"
             apt -y install gdebi
 			sleep 2.0
 			;;
+
+        2_system)
+            #Plank
+            echo "*******************"
+            echo "* Update Plank... *"
+            echo "*******************"
+            add-apt-repository -y ppa:ricotz/docky
+            apt update
+            apt -y upgrade
+            #Kill Plank (which will restart) so we can get the updated version & set the zoom level
+            killall plank
+            dconf write /net/launchpad/plank/docks/dock1/zoom-enabled true
+            dconf write /net/launchpad/plank/docks/dock1/zoom-percent 200
+            sleep 2.0
+            ;;
 
 # Section C ----------social----------
 
