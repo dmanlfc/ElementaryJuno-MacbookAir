@@ -154,7 +154,7 @@ options=(
 		    echo "**************************************"
 		    echo "* Install Telegram Desktop (snap)... *"
 		    echo "**************************************"
-		    sudo snap install telegram-desktop
+		    sudo snap -y install telegram-desktop
 		    sleep 2.0
 		    ;;
 
@@ -276,7 +276,7 @@ options=(
 			echo "* Installing Kdenlive (Flatpak)... *"
             echo "************************************"
             #apt -y install kdenlive #Older version
-            flatpak install https://flathub.org/repo/appstream/org.kde.kdenlive.flatpakref
+            flatpak -y install https://flathub.org/repo/appstream/org.kde.kdenlive.flatpakref
             sleep 2.0
 			;;
 
@@ -285,7 +285,7 @@ options=(
             echo "********************************"
 			echo "* Installing GIMP (Flatpak)... *"
             echo "********************************"
-            flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+            flatpak -y install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
 			#apt -y install gimp #Older version
 			sleep 2.0
 			;;
@@ -335,7 +335,7 @@ options=(
             echo "**************************************"
 			echo "* Installing TLP power management... *"
             echo "**************************************"
-			apt install tlp tlp-rdw
+			apt -y install tlp tlp-rdw
 			tlp start
 			systemctl enable tlp
             sleep 2.0

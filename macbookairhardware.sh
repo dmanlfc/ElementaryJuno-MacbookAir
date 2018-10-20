@@ -9,7 +9,7 @@ else
 echo "*****************************************"
 echo "* Updating and upgrading your system... *"
 echo "*****************************************"
-apt update && apt upgrade
+apt update && apt -y upgrade
 
 #Installing the hardware drivers
 chmod +x *.sh
@@ -27,4 +27,4 @@ apt -y autoremove
 echo "********************************"
 echo "* DONE! Ideally reboot your PC *"
 echo "********************************"
-echo
+fi

@@ -41,3 +41,4 @@ fi
 echo
 echo "Install complete!"
 echo
+fi

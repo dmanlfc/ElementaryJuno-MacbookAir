@@ -60,3 +60,4 @@ systemctl status mbpfan.service
 echo
 echo "Install complete!"
 echo
+fi

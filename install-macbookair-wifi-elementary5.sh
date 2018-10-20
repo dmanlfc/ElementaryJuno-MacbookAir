@@ -15,3 +15,4 @@ modprobe wl
 echo
 echo "Install complete!"
 echo
+fi
