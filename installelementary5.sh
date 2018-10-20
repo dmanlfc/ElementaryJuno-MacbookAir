@@ -59,6 +59,10 @@ options=(
 	#J "<---Category: Gaming & Fun--->" on
 	    1_gaming " Steam (Flatpak)" off
 	    2_gaming " Mesa - Stable (PPA)" off
+	#K "<---Category: Curated Apps--->" on
+	    1_curated " Eddy" off
+	    2_curated " Image Burner" off
+	    3_curated " Formatter" off
 	    )
 	    choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 		clear
@@ -395,6 +399,34 @@ options=(
             apt update
             apt -y upgrade
             sleep 2.0
+            ;;
+
+# Section K ----------curated----------
+        1_curated)
+            #Eddy
+            echo "*******************"
+            echo "* Install Eddy... *"
+            echo "*******************"
+            apt -y install com.github.donadigo.eddy
+            sleep 2.0
+            ;;
+
+        2_curated)
+            #Image Burner
+            echo "***************************"
+            echo "* Install Image Burner... *"
+            echo "***************************"
+            apt -y install com.github.artemanufrij.imageburner
+            sleep 2.0
+            ;;
+
+        3_curated)
+            #Formatter
+            echo "************************"
+            echo "* Install Formatter... *"
+            echo "************************"
+            apt -y install com.github.djaler.formatter
+	        sleep 2.0
 	        esac
         done
 fi
