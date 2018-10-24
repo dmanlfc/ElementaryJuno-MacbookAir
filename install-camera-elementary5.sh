@@ -3,8 +3,8 @@
 KERNELRELEASE=$(uname -r)
 
 if [[ $EUID -ne 0 ]]; then
-    echo "This script must be run as root type: sudo ./installscript"
-   	exit 1
+  echo "This script must be run as root type: sudo ./installscript"
+  exit 1
 else
 
 echo "Ensure dependancies are installed..."
@@ -38,7 +38,7 @@ if [ ! -d "/etc/modules-load.d/facetimehd.conf" ]; then
   echo "Creating FaceTimeHD config file..."
   echo > "/etc/modules-load.d/facetimehd.conf" facetimehd
 fi
-echo
-echo "Install complete!"
-echo
+echo "**************************************"
+echo "* FaceTime HD installation complete! *"
+echo "**************************************"
 fi
