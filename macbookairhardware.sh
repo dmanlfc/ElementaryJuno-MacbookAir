@@ -13,11 +13,17 @@ apt update && apt -y upgrade
 
 #Installing the hardware drivers
 chmod +x *.sh
-echo "Installing the FaceTime HD web camera"
+echo "*****************************************"
+echo "* Installing the FaceTime HD web camera *"
+echo "*****************************************"
 ./install-camera-elementary5.sh
-echo "Install the Broadcom WiFi driver"
+echo "************************************"
+echo "* Install the Broadcom WiFi driver *"
+echo "************************************"
 ./install-macbookair-wifi-elementary5.sh
-echo "Ensure the fan drivers are installed"
+echo "****************************************"
+echo "* Ensure the fan drivers are installed *"
+echo "****************************************"
 ./install-macbookfan-elementary5.sh
 
 echo "****************************"
