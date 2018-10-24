@@ -7,12 +7,12 @@ else
 
 clear
 #Install Macbook Air Broadcom Wifi
-echo "*******************************"
-echo "Installing Mackbook Air Wifi..."
-echo "*******************************"
+echo "***********************************"
+echo "* Installing Mackbook Air Wifi... *"
+echo "***********************************"
 apt install -y bcmwl-kernel-source
 modprobe wl
-echo
-echo "Install complete!"
-echo
+echo "*******************************"
+echo "* Wifi installation complete! *"
+echo "*******************************"
 fi
