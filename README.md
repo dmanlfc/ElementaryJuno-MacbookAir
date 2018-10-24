@@ -16,8 +16,8 @@ The script will grab the latest (at time of writing) packages from various sourc
 Although there is more containerisation technologies emerging I tend to still opt for native DEB packages first.
 
 Note: All scripts must be executable & run as sudo
-i.e. chmod +x ./<name of sh file>
-sudo ./<name of sh file>
+i.e. chmod +x ./name of sh file
+sudo ./name of sh file
 
 Hopefully this is usefull to some people
 
