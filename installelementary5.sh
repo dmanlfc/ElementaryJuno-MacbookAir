@@ -83,9 +83,9 @@ options=(
 
 		2_repos)
 		    #Install Flathub Repository
-		    echo "******************************"
-		    echo "* Install Flathub Repository *"
-		    echo "******************************"
+		    echo "***************************************"
+		    echo "* Install Flathub Repository (PPA)... *"
+		    echo "***************************************"
 		    apt -y install software-properties-common --no-install-recommends
 		    add-apt-repository -y ppa:alexlarsson/flatpak
 		    apt update
@@ -114,9 +114,9 @@ options=(
 
         2_system)
             #Plank
-            echo "*******************"
-            echo "* Update Plank... *"
-            echo "*******************"
+            echo "*************************"
+            echo "* Update Plank (PPA)... *"
+            echo "*************************"
             add-apt-repository -y ppa:ricotz/docky
             apt update
             apt -y upgrade
@@ -155,9 +155,9 @@ options=(
 
 		3_social)
 		    #Discord
-		    echo "*************************"
-		    echo "* Installing Discord... *"
-		    echo "*************************"
+		    echo "********************************"
+		    echo "* Installing Discord (wget)... *"
+		    echo "********************************"
 		    apt -y install libgconf-2-4 libappindicator1
 		    wget https://dl.discordapp.net/apps/linux/0.0.5/discord-0.0.5.deb
 		    dpkg -i discord-0.0.5.deb
@@ -308,9 +308,9 @@ options=(
 
 		3_edit)
 			#OBS Studio
-            echo "****************************"
-			echo "* Installing OBS Studio... *"
-            echo "****************************"
+            		echo "**********************************"
+			echo "* Installing OBS Studio (PPA)... *"
+            		echo "**********************************"
 			#apt -y install obs-studio #Older version
 			#We need ffmpeg
 			apt -y install ffmpeg
